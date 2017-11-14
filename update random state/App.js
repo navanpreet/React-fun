@@ -28,10 +28,8 @@ class App extends Component {
       let instructors = this.state.instructors.map((instructor, index) => {
         if(index === instructorIndex){
           instructor.hobbies.splice(hobbyIndex, 1);
-          return {name: instructor.name, hobbies: instructor.hobbies};
-        } else {
-          return instructor;
         }
+        return instructor;
       });
       this.setState({instructors});
     }, 5000);
